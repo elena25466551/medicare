@@ -1,4 +1,3 @@
-import './App.css'
 import Navbar from './components/Navbar'
 import { AppRouter } from './routers/AppRouter'
 import { useEffect, useState } from 'react'

@@ -6,7 +6,7 @@ const Navbar = () =>
         return(
                 <header id="navbar">
                         <nav className="navbar navbar-expand-lg navbar-light">
-                                <h1 className="navbar-brand">Turnos</h1>
+                                <h1 className="navbar-brand">MediCare</h1>
                                 <div className="container-fluid">
                                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -14,7 +14,7 @@ const Navbar = () =>
                                                         <Link to="/" className="nav-link active" aria-current="page">Inicio</Link>
                                                         </li>
                                                         <li className="nav-item">
-                                                        <Link className="nav-link active" aria-current="page">Nosotros</Link>
+                                                        <Link to="/profile" className="nav-link active" aria-current="page">Nosotros</Link>
                                                         </li>
                                                 </ul>
                                                 <div className="d-flex">

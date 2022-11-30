@@ -5,6 +5,11 @@ const UserSchema = new Schema({
                 type: String,
                 required: true
         },
+        userEmail: {
+                type: String,
+                required: true,
+                unique: true
+        },
         userPassword: {
                 type: String,
                 required:true
@@ -13,9 +18,9 @@ const UserSchema = new Schema({
                 type: Boolean,
                 default: true
         },
-        role: [{
+        userSpecialty: {
                 type: String
-        }]
+        }
 }, {
         timestamps: true,
         versionKey: false

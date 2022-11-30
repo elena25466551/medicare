@@ -2,18 +2,13 @@
         --main-color: #6D9886;
 }
 
-#page-container {
-        position: relative;
-        min-height: 100vh;
-}
-
 #link {
         text-decoration: none;
         color: white;
 }
 #navbar nav {
         background-color: white;
-        border-bottom: solid var(--main-color);
+        filter: drop-shadow(5px -20px 20px black);
 }
         #login-button {
                 border: none;
@@ -102,6 +97,11 @@
         }
         #selectInput-register {
                 margin-left: 50px;
+                cursor: pointer;
+                border: 2px solid var(--main-color);
+                border-radius: 5px;
+                line-height: 36px;
+                height: 36px;
         }
 
 #landing-text {
