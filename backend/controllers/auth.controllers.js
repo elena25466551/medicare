@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 const ctrlAuth = {};
 
-ctrlAuth.login = async (req, res) =>
+ctrlAuth.logIn = async (req, res) =>
 {
         const { userName, userPassword } = req.body;
 
@@ -29,6 +29,13 @@ ctrlAuth.login = async (req, res) =>
                                 msg: "Error al autenticarse - Contraseña incorrecta"
                         })
                 }
+
+                const token = await generateJWT({ uid: user._id});
+                return res.json({
+                        token,
+                        session: `Sesión iniciada como ${user.userName}`
+                });
+
         } catch (error) {
                 console.log(error);
                 return res.status(400).json({
@@ -37,3 +44,5 @@ ctrlAuth.login = async (req, res) =>
                 })
         }
 }
+
+module.exports = ctrlAuth;

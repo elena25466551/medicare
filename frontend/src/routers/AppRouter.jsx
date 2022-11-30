@@ -28,9 +28,9 @@ export const AppRouter = () => {
               }/>
 
               <Route path="/profile" element={
-                <PrivateRoutes>
+                <PublicRoutes>
                   <Profile/>
-                </PrivateRoutes>
+                </PublicRoutes>
               }/>
       
             </Routes>
