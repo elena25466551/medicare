@@ -7,13 +7,53 @@
 .react-calendar {
         position: absolute;
         z-index: 1;
-        left: 50%;
+        left: 40%;
         top: 35%;
+        border-radius: 3px;
 }
+abbr[title] {
+        text-decoration: none;
+      }
+      .react-calendar__navigation button:enabled:hover,
+      .react-calendar__navigation button:enabled:focus {
+        background-color: #f8f8fa;
+      }
+      .react-calendar__navigation button[disabled] {
+        background-color: #f0f0f0;
+      }
+        .react-calendar__tile:enabled:hover,
+        .react-calendar__tile:enabled:focus {
+        background: #f8f8fa;
+        color: var(--main-color);
+        border-radius: 6px;
+        }
+        .react-calendar__tile--now {
+                background: var(--main-color);
+                border-radius: 6px;
+                font-weight: bold;
+                color: white;
+              }
+              .react-calendar__tile--now:enabled:hover,
+              .react-calendar__tile--now:enabled:focus {
+                background: lightblue;
+                border-radius: 6px;
+                font-weight: bold;
+                color: var(--main-color);
+              }
+              .react-calendar__tile--hasActive:enabled:hover,
+              .react-calendar__tile--hasActive:enabled:focus {
+               background: #f8f8fa;
+               }
+               .react-calendar__tile--active {
+                background: lightgray;
+                border-radius: 6px;
+                font-weight: bold;
+                color: var(--main-color);
+              }
         #calendarButton {
                 position: absolute;
                 z-index: 1;
-                left: 60%;
+                left: 50%;
                 top: 85%;
                 background-color: var(--main-color);
                 border-radius: 40px;
@@ -49,3 +89,34 @@
                 z-index: -1;
                 background: url("https://media.istockphoto.com/id/1160720443/es/vector/patr%C3%B3n-abstracto-vectorial-simple-sin-costuras-con-textura-de-l%C3%ADnea-dorada-sobre-fondo.jpg?s=612x612&w=0&k=20&c=cqkN10B8e0gjVXCCcFiObSWozOz-HRLVUSTv7_USe8Q=");
         }
+
+#scheduleContainer {
+        background-color: lightgray;
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        z-index: 1;
+        left: 70%;
+        top: 35%;
+        border-radius: 5px;
+}
+        .scheduleSet {
+                background-color: white;
+                padding: 3px;
+                margin: 5px;
+                border-radius: 3.5px;
+                float: right;
+        }
+                .scheduleInfo {
+                    position: relative;
+                    bottom: -15px;  
+                }
+                .arrowDiv {
+                        width: 30%;
+                        position: relative;
+                        left: 85%;
+                        bottom: 10px;
+                }
+                .arrowIcon {
+                        max-width: 30%;
+                }

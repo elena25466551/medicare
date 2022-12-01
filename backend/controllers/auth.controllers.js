@@ -1,5 +1,6 @@
 const User = require("../src/models/User");
 const bcrypt = require("bcrypt");
+const generateJWT = require("../src/middlewares/generate-jwt");
 
 const ctrlAuth = {};
 
@@ -12,7 +13,8 @@ ctrlAuth.logIn = async (req, res) =>
 
                 if (!user) {
                         return res.status(400).json({
-                                msg: "Error al autenticarse - Usuario no encontrado"
+                                msg: "Error al autenticarse - Usuario no encontrado",
+                                data: [userName, userPassword]
                         })
                 }
 

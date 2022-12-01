@@ -4,6 +4,44 @@ import Navbar from "../components/Navbar";
 import 'react-calendar/dist/Calendar.css';
 
 const Profile = () => {
+        const Schedule = {
+                scheduleAM: [
+                        "8:00 AM a 8:30 AM",
+                        "8:30 AM a 9:00 AM",
+                        "9:30 AM a 10:00 AM",
+                        "10:00 AM a 10:30 AM"
+                ],
+                schedulePM: [
+                        "17:00 PM a 17:30 PM",
+                        "17:30 PM a 18:00 PM",
+                        "18:00 PM a 18:30 PM",
+                        "18:30 PM a 19:00 PM"
+                ]
+        };
+
+        function renderSchedule()
+        {
+                const scheduleList = [];
+                
+                Schedule.scheduleAM.forEach(schedule => {
+                        scheduleList.push(
+                                <div key={schedule} className="scheduleSet">
+                                        <div className="scheduleInfo">
+                                                {schedule}     
+                                        </div>
+                                        <div className="arrowDiv">
+                                                <img className="arrowIcon" src="https://cdn-icons-png.flaticon.com/512/318/318476.png"/>
+                                        </div>
+                                </div>
+                        )
+                });
+                        return(
+                                <div>
+                                        {scheduleList}
+                                </div>
+                        )
+        }
+
         return(
                 <>
                 <Navbar/>
@@ -16,28 +54,10 @@ const Profile = () => {
                         </div>
                         <div>
                                 <Calendar id="profileCalendar"/>
-                                <button id="calendarButton" type="button" data-toggle="modal" data-target="#exampleModal">
-                                 Dar turno
-                                </button>
-                        </div>
-                        
-                        <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div className="modal-dialog" role="document">
-                                        <div className="modal-content">
-                                                <div className="modal-header">
-                                                        <h5 className="modal-title" id="exampleModalLabel">Título</h5>
-                                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                </div>
-                                                <div className="modal-body">
-                                                        ...
-                                                </div>
-                                                <div className="modal-footer">
-                                                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                                        <button type="button" className="btn btn-primary">Guardar</button>
-                                                </div>
-                                        </div>
+                                <button id="calendarButton">Pedir turno</button>
+
+                                <div id="scheduleContainer">
+                                        {renderSchedule()}
                                 </div>
                         </div>
 
