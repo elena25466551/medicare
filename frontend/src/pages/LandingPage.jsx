@@ -11,7 +11,7 @@ const LandingPage = () =>
         <div>
                 <div id='landing-text'>
                   <h1>Valoramos tu tiempo como si fuese nuestro</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus omnis porro dolorem beatae temporibus doloremque reprehenderit molestias possimus? Esse illum velit libero nisi dolore culpa quam animi sit necessitatibus tempore!</p>
+                  <p>Necesitas un turno sacalo desde tu casa con un solo click en nuestra pagina MEDICARE; te damos el mejor servicio medico podes elejir especialidad. Turnos al instante, "se terminaron las esperas". Al concurrir al turno el especialista te atendera de inmediato en la hora pactada. </p>
                 </div>
                 <div id='landing-separator'>
                   <div id='cards-container'>

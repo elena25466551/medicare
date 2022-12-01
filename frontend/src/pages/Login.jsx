@@ -33,7 +33,7 @@ export default function Login() {
     const response = await fetch("http://localhost:4000/login", requestOptions)
     const dataToJson = await response.json();
     setData(dataToJson)
-    navigate('/profile')
+    navigate('/about')
     console.log(dataToJson)
   }
   return (

@@ -16,7 +16,7 @@ ctrlUser.postUser = async (req, res) =>
         const { userName, userEmail, userPassword: receivedPassword, userSpecialty, userPasswordConfirm } = req.body;
 
         
-        if (!userName || !userEmail || !receivedPassword || !userSpecialty){
+        if (!userName || !userEmail || !receivedPassword){
                 console.log('Datos faltantes')
                 return res.status(400).json({
                         msg: "Hubo un error al crear al usuario"

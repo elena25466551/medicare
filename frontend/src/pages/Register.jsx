@@ -43,7 +43,9 @@ export default function Register() {
                     <div className="mb-3">
                       <label htmlFor="UserInput-register" className="form-label">Nombre de usuario</label><br/>
                       <input onChange={handleInputChange} type="text" name='userName' id="UserInput-register" aria-describedby="emailHelp"/>
-                      <select onChange={handleInputChange} id="selectInput-register" name='userSpecialty'>
+                     {/*cambio a true si quiero mostrar selector para cargar profesionales */}
+                      {false? (
+                        <select onChange={handleInputChange} id="selectInput-register" name='userSpecialty'>
                         <option disabled defaultValue>Especialidad</option>
                         <option disabled>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</option>
                         <option>Clínico</option>
@@ -52,6 +54,7 @@ export default function Register() {
                         <option>Dermatólogo</option>
                         <option>Pediatra</option>
                       </select>
+                      ) : (null)}
                     </div>
                     <div className="mb-3">
                       <label htmlFor="EmailInput-register" className="form-label">Correo electrónico</label><br/>

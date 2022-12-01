@@ -6,6 +6,7 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import PageNotFound from '../pages/PageNotFound'
 import Profile from '../pages/Profile'
+import About from '../pages/About'
 
 export const AppRouter = () => {
         return (
@@ -32,7 +33,11 @@ export const AppRouter = () => {
                   <Profile/>
                 </PublicRoutes>
               }/>
-      
+             <Route path="/about" element={
+                <PublicRoutes>
+                  <About/>
+                </PublicRoutes>
+              }/>
             </Routes>
           </BrowserRouter>
         )
